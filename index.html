@@ -3,35 +3,84 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NYDJustin</title>
+<title>NYDJustin — projects</title>
+<meta name="description" content="Projects and pages by NYDJustin.">
+<link rel="icon" href="https://cdn.discordapp.com/avatars/1561503616794099822/38261ae2100fa75b13b71d796d8e299e.png?size=256">
 <style>
-:root { color-scheme: light; }
-* { box-sizing: border-box; }
-body { margin: 0; font-family: -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #f6f5fc; color: #221d3a; line-height: 1.65; }
-header { background: #1a0f52; color: #f5f2ff; padding: 28px 20px 22px; }
-header .wrap, main, footer .wrap { max-width: 760px; margin: 0 auto; }
-header h1 { margin: 0 0 4px; font-size: 1.55rem; }
-header p { margin: 0; opacity: .85; font-size: .95rem; }
-nav { margin-top: 14px; }
-nav a { color: #ffd166; text-decoration: none; margin-right: 18px; font-weight: 600; font-size: .95rem; }
-nav a:hover { text-decoration: underline; }
-main { padding: 28px 20px 10px; }
-h1 { font-size: 1.5rem; line-height: 1.3; }
-h2 { margin-top: 2em; font-size: 1.2rem; color: #1a0f52; }
-h3 { margin-top: 1.5em; font-size: 1.05rem; }
-a { color: #3b2bb3; }
-blockquote { border-left: 4px solid #ffd166; margin: 1em 0; padding: .4em 1em; background: #fff8e6; }
-hr { border: none; border-top: 1px solid #ddd8f3; margin: 2em 0; }
-code { background: #eceafd; padding: .1em .35em; border-radius: 4px; font-size: .92em; }
-footer { padding: 18px 20px 34px; color: #6b6584; font-size: .9rem; }
+:root{ --ink:#221d3a; --muted:#5d5680; --paper:#f6f5fc; --card:#fff; --line:#e3defa;
+ --indigo:#1a0f52; --indigo2:#2a1a7a; --gold:#ffd166; --gold2:#f4a950; }
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{ margin:0; font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; background:var(--paper); color:var(--ink); line-height:1.65; }
+a{ color:#3b2bb3; }
+.site-head{ background:linear-gradient(160deg,#120a38 0%,#241265 55%,#31207f 100%); color:#f5f2ff; position:relative; overflow:hidden; }
+.site-head::before{ content:""; position:absolute; inset:0;
+ background-image:radial-gradient(2px 2px at 12% 30%,#ffd166 60%,transparent 61%),radial-gradient(1.6px 1.6px at 32% 70%,#fff 60%,transparent 61%),radial-gradient(2px 2px at 55% 20%,#fff 60%,transparent 61%),radial-gradient(1.5px 1.5px at 71% 62%,#ffd166 60%,transparent 61%),radial-gradient(1.8px 1.8px at 86% 28%,#fff 60%,transparent 61%),radial-gradient(1.4px 1.4px at 93% 74%,#fff 60%,transparent 61%),radial-gradient(1.5px 1.5px at 43% 88%,#ffd166 60%,transparent 61%),radial-gradient(1.3px 1.3px at 5% 82%,#fff 60%,transparent 61%);
+ opacity:.8; }
+.site-head .wrap{ position:relative; max-width:1080px; margin:0 auto; padding:20px 20px 0; }
+.topbar{ display:flex; align-items:center; gap:12px; }
+.topbar img{ width:44px; height:44px; border-radius:50%; border:2px solid var(--gold); background:#241265; }
+.topbar .brand{ font-weight:800; font-size:1.15rem; letter-spacing:.2px; }
+.topbar nav{ margin-left:auto; display:flex; gap:20px; flex-wrap:wrap; }
+.topbar nav a{ color:#e9e4ff; text-decoration:none; font-weight:600; font-size:.95rem; }
+.topbar nav a:hover{ color:var(--gold); }
+.hero{ position:relative; max-width:1080px; margin:0 auto; padding:56px 20px 64px; display:flex; gap:36px; align-items:center; flex-wrap:wrap; }
+.hero img.avatar{ width:168px; height:168px; border-radius:50%; border:4px solid var(--gold); box-shadow:0 12px 40px rgba(0,0,0,.45); background:#241265; }
+.hero .txt{ flex:1; min-width:280px; }
+.hero h1{ margin:0 0 6px; font-size:2.6rem; line-height:1.12; }
+.hero h1 .gold{ color:var(--gold); }
+.hero p.tag{ margin:0 0 10px; font-size:1.2rem; color:#d9d2ff; }
+.hero p.sub{ margin:0 0 22px; color:#bdb2f2; max-width:560px; }
+.btns{ display:flex; gap:12px; flex-wrap:wrap; }
+.btn{ display:inline-block; padding:12px 22px; border-radius:999px; font-weight:700; text-decoration:none; font-size:1rem; }
+.btn.gold{ background:linear-gradient(180deg,var(--gold),var(--gold2)); color:#2a1a00; box-shadow:0 6px 20px rgba(244,169,80,.35); }
+.btn.ghost{ border:2px solid #8f83d8; color:#efeaff; }
+.btn:hover{ filter:brightness(1.06); }
+main{ max-width:1080px; margin:0 auto; padding:38px 20px 8px; }
+main.doc{ max-width:800px; }
+h2.sec{ font-size:1.55rem; color:var(--indigo); margin:38px 0 6px; }
+p.lead{ color:var(--muted); margin:0 0 18px; max-width:720px; }
+.grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; }
+.card{ background:var(--card); border:1px solid var(--line); border-radius:16px; padding:20px 22px; box-shadow:0 2px 10px rgba(26,15,82,.05); transition:transform .15s ease, box-shadow .15s ease; }
+.card:hover{ transform:translateY(-3px); box-shadow:0 10px 24px rgba(26,15,82,.10); }
+.card h3{ margin:0 0 6px; font-size:1.08rem; }
+.card p{ margin:0; color:var(--muted); font-size:.97rem; }
+.chips{ display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
+.chip{ background:#eceafd; color:var(--indigo); border:1px solid #d9d2fb; padding:5px 12px; border-radius:999px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.9rem; font-weight:600; }
+.duo{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; }
+.duo .card.pub{ border-top:4px solid var(--gold2); }
+.duo .card.priv{ border-top:4px solid var(--indigo2); }
+.doc h1{ font-size:1.55rem; line-height:1.3; }
+.doc h2{ margin-top:2em; font-size:1.22rem; color:var(--indigo); }
+.doc h3{ margin-top:1.5em; font-size:1.05rem; }
+.doc blockquote{ border-left:4px solid var(--gold); margin:1em 0; padding:.45em 1em; background:#fff8e6; }
+.doc hr{ border:none; border-top:1px solid var(--line); margin:2em 0; }
+.doc code{ background:#eceafd; padding:.1em .35em; border-radius:4px; font-size:.92em; }
+.toc{ background:#fff; border:1px solid var(--line); border-radius:14px; padding:16px 22px; margin:22px 0 6px; }
+.toc strong{ color:var(--indigo); }
+.toc ol{ margin:8px 0 4px; padding-left:22px; }
+.toc a{ text-decoration:none; }
+.toc a:hover{ text-decoration:underline; }
+.page-hero{ position:relative; max-width:800px; margin:0 auto; padding:40px 20px 34px; }
+.page-hero h1{ margin:0 0 6px; font-size:2rem; }
+.page-hero p{ margin:0; color:#cfc6fa; }
+footer{ margin-top:54px; background:var(--indigo); color:#cfc6fa; }
+footer .wrap{ max-width:1080px; margin:0 auto; padding:26px 20px 34px; display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+footer a{ color:var(--gold); text-decoration:none; font-weight:600; }
+footer .sp{ flex:1; }
+@media (max-width:560px){ .hero h1{font-size:2rem} .hero img.avatar{width:120px;height:120px} }
 </style>
 </head>
 <body>
-<header><div class="wrap"><h1>NYDJustin</h1><p>Projects and pages.</p></div></header>
+<div class="site-head"><div class="wrap"><div class="topbar"><img src="https://cdn.discordapp.com/avatars/1561503616794099822/38261ae2100fa75b13b71d796d8e299e.png?size=256" alt="Nara"><span class="brand">Nara</span><nav><a href="/nara/">Home</a><a href="/nara/privacy.html">Privacy Policy</a><a href="/nara/terms.html">Terms of Service</a><a href="https://discord.gg/zxSRYFnubQ">Nara's Nest</a></nav></div></div>
+<div class="page-hero"><h1>NYDJustin</h1><p>Computer science student building things in public.</p></div>
+</div>
 <main>
-<h2>Projects</h2>
-<p>🐦 <a href="/nara/"><strong>Nara</strong></a> — a free AI companion bot for Discord. <a href="/nara/privacy.html">Privacy</a> · <a href="/nara/terms.html">Terms</a></p>
+<h2 class="sec">Projects</h2>
+<div class="grid">
+<div class="card"><h3>🐦 Nara — AI companion for Discord</h3><p>A free AI companion bot: chat, live web search, images, voice, long-term memory, reminders and tasks. <a href="/nara/">Meet Nara →</a></p></div>
+</div>
 </main>
-<footer><div class="wrap">On Discord as @nydjustin.</div></footer>
+<footer><div class="wrap"><span>🐦 <strong>Nara</strong> — free for everyone, made by <a href="https://github.com/NYDJustin">@nydjustin</a></span><span class="sp"></span><a href="/nara/privacy.html">Privacy</a><a href="/nara/terms.html">Terms</a><a href="https://discord.gg/zxSRYFnubQ">Support server</a></div></footer>
 </body>
 </html>
