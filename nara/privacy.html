@@ -5,12 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Nara</title>
 <meta name="description" content="Privacy Policy for Nara, a free AI companion bot for Discord.">
+<meta property="og:title" content="Privacy Policy — Nara">
+<meta property="og:description" content="Privacy Policy for Nara, a free AI companion bot for Discord.">
+<meta property="og:image" content="https://cdn.discordapp.com/avatars/1561503616794099822/38261ae2100fa75b13b71d796d8e299e.png?size=256">
 <link rel="icon" href="https://cdn.discordapp.com/avatars/1561503616794099822/38261ae2100fa75b13b71d796d8e299e.png?size=256">
 <style>
 :root{ --ink:#221d3a; --muted:#5d5680; --paper:#f6f5fc; --card:#fff; --line:#e3defa;
  --indigo:#1a0f52; --indigo2:#2a1a7a; --gold:#ffd166; --gold2:#f4a950; }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+::selection{ background:var(--gold); }
 body{ margin:0; font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; background:var(--paper); color:var(--ink); line-height:1.65; }
 a{ color:#3b2bb3; }
 .site-head{ background:linear-gradient(160deg,#120a38 0%,#241265 55%,#31207f 100%); color:#f5f2ff; position:relative; overflow:hidden; }
@@ -37,9 +41,11 @@ a{ color:#3b2bb3; }
 .btn.ghost{ border:2px solid #8f83d8; color:#efeaff; }
 .btn:hover{ filter:brightness(1.06); }
 main{ max-width:1080px; margin:0 auto; padding:38px 20px 8px; }
-main.doc{ max-width:800px; }
+main.doc{ max-width:800px; padding-top:26px; }
 h2.sec{ font-size:1.55rem; color:var(--indigo); margin:38px 0 6px; }
+h2.sec::before{ content:"✦ "; color:var(--gold2); }
 p.lead{ color:var(--muted); margin:0 0 18px; max-width:720px; }
+.divider{ text-align:center; color:var(--gold2); letter-spacing:14px; margin:40px 0 0; font-size:.95rem; }
 .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; }
 .card{ background:var(--card); border:1px solid var(--line); border-radius:16px; padding:20px 22px; box-shadow:0 2px 10px rgba(26,15,82,.05); transition:transform .15s ease, box-shadow .15s ease; }
 .card:hover{ transform:translateY(-3px); box-shadow:0 10px 24px rgba(26,15,82,.10); }
@@ -56,30 +62,37 @@ p.lead{ color:var(--muted); margin:0 0 18px; max-width:720px; }
 .doc blockquote{ border-left:4px solid var(--gold); margin:1em 0; padding:.45em 1em; background:#fff8e6; }
 .doc hr{ border:none; border-top:1px solid var(--line); margin:2em 0; }
 .doc code{ background:#eceafd; padding:.1em .35em; border-radius:4px; font-size:.92em; }
-.toc{ background:#fff; border:1px solid var(--line); border-radius:14px; padding:16px 22px; margin:22px 0 6px; }
+.toc{ background:#fff; border:1px solid var(--line); border-radius:14px; padding:16px 22px; margin:0 0 6px; }
 .toc strong{ color:var(--indigo); }
 .toc ol{ margin:8px 0 4px; padding-left:22px; }
+.toc li::marker{ color:var(--gold2); font-weight:700; }
 .toc a{ text-decoration:none; }
 .toc a:hover{ text-decoration:underline; }
+.sheet{ background:#fff; border:1px solid var(--line); border-radius:18px; box-shadow:0 4px 18px rgba(26,15,82,.07); padding:10px 38px 30px; margin-top:18px; position:relative; }
+.sheet::before{ content:""; position:absolute; top:0; left:0; right:0; height:5px; border-radius:18px 18px 0 0; background:linear-gradient(90deg,var(--indigo2),var(--gold)); }
+.sheet h2{ border-bottom:3px solid var(--gold); padding-bottom:6px; }
+.sheet h2::before{ content:"✦ "; color:var(--gold2); }
+.sheet a{ text-decoration-color:#d9a92f; text-underline-offset:3px; }
+.cta{ margin-top:24px; background:linear-gradient(160deg,#241265,#31207f); color:#efeaff; border-radius:18px; padding:24px 28px; display:flex; gap:18px; align-items:center; flex-wrap:wrap; position:relative; overflow:hidden; }
+.cta img{ width:56px; height:56px; border-radius:50%; border:3px solid var(--gold); background:#241265; }
+.cta .t{ flex:1; min-width:220px; }
+.cta .t strong{ display:block; font-size:1.08rem; margin-bottom:2px; }
+.cta .t span{ color:#cfc6fa; font-size:.95rem; }
 .page-hero{ position:relative; max-width:800px; margin:0 auto; padding:40px 20px 34px; }
+.page-hero.wide{ max-width:1080px; }
 .page-hero h1{ margin:0 0 6px; font-size:2rem; }
 .page-hero p{ margin:0; color:#cfc6fa; }
+.pill{ display:inline-block; border:1px solid #8f83d8; color:#e9e4ff; border-radius:999px; padding:3px 12px; font-size:.85rem; margin-top:12px; margin-right:8px; }
 footer{ margin-top:54px; background:var(--indigo); color:#cfc6fa; }
 footer .wrap{ max-width:1080px; margin:0 auto; padding:26px 20px 34px; display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
 footer a{ color:var(--gold); text-decoration:none; font-weight:600; }
 footer .sp{ flex:1; }
-
-.doc{ padding-top:26px; }
-.doc .toc{ margin-top:0; }
-.sheet{ background:#fff; border:1px solid var(--line); border-radius:18px; box-shadow:0 4px 18px rgba(26,15,82,.07); padding:10px 38px 30px; margin-top:18px; }
-.sheet h2{ border-bottom:3px solid var(--gold); padding-bottom:6px; }
-@media (max-width:560px){ .sheet{ padding:6px 20px 24px; } }
-@media (max-width:560px){ .hero h1{font-size:2rem} .hero img.avatar{width:120px;height:120px} }
+@media (max-width:560px){ .hero h1{font-size:2rem} .hero img.avatar{width:120px;height:120px} .sheet{padding:6px 20px 24px} }
 </style>
 </head>
 <body>
 <div class="site-head"><div class="wrap"><div class="topbar"><img src="https://cdn.discordapp.com/avatars/1561503616794099822/38261ae2100fa75b13b71d796d8e299e.png?size=256" alt="Nara"><span class="brand">Nara</span><nav><a href="/nara/">Home</a><a href="/nara/privacy.html">Privacy Policy</a><a href="/nara/terms.html">Terms of Service</a></nav></div></div>
-<div class="page-hero"><h1>Privacy Policy</h1><p>Nara — a free AI companion for Discord</p></div>
+<div class="page-hero"><h1>Privacy Policy</h1><p>Nara — a free AI companion for Discord</p><span class="pill">Last updated · October 20, 2026</span><span class="pill">Canonical · nydjustin.github.io</span></div>
 </div>
 <main class="doc"><div class="toc"><strong>On this page</strong><ol><li><a href="#1-what-we-collect-and-store">1. What we collect and store</a></li><li><a href="#2-why-we-process-this-data-purposes-and-legal-bases">2. Why we process this data (purposes and legal bases)</a></li><li><a href="#3-third-parties">3. Third parties</a></li><li><a href="#4-how-long-we-keep-data">4. How long we keep data</a></li><li><a href="#5-your-choices-and-rights">5. Your choices and rights</a></li><li><a href="#6-children">6. Children</a></li><li><a href="#7-changes-to-this-policy">7. Changes to this policy</a></li><li><a href="#8-contact">8. Contact</a></li></ol></div><div class="sheet"><h1>Privacy Policy — Nara (Discord Bot)</h1>
 <p><strong>Last updated:</strong> October 20, 2026
@@ -178,7 +191,7 @@ footer .sp{ flex:1; }
 <ul>
 <li>Support server: <strong>https://discord.gg/zxSRYFnubQ</strong></li>
 <li>Developer on Discord: <strong>@nydjustin</strong></li>
-</ul></div></main>
+</ul></div><div class="cta"><img src="https://cdn.discordapp.com/avatars/1561503616794099822/38261ae2100fa75b13b71d796d8e299e.png?size=256" alt="Nara" onerror="this.style.display='none'"><div class="t"><strong>Questions? Talk to a human in the nest.</strong><span>The developer reads everything in Nara's support server — or meet Nara herself first.</span></div><div class="btns"><a class="btn gold" href="https://discord.gg/zxSRYFnubQ">🐦 Nara's Nest</a><a class="btn ghost" href="/nara/">Meet Nara</a></div></div></main>
 <footer><div class="wrap"><span>🐦 <strong>Nara</strong> — free for everyone, made by <a href="https://github.com/NYDJustin">@nydjustin</a></span><span class="sp"></span><a href="/nara/privacy.html">Privacy</a><a href="/nara/terms.html">Terms</a><a href="https://discord.gg/zxSRYFnubQ">Support server</a></div></footer>
 </body>
 </html>
