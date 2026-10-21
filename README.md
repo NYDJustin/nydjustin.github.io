@@ -4,9 +4,10 @@ Personal site and project pages for **NYDJustin**.
 
 ## Nara — a free AI companion for Discord
 
-- Landing: https://nydjustin.github.io/nara/
-- Privacy Policy: https://nydjustin.github.io/nara/privacy.html
-- Terms of Service: https://nydjustin.github.io/nara/terms.html
+- Landing: https://nara.is-a.dev/
+- Privacy Policy: https://nara.is-a.dev/privacy.html
+- Terms of Service: https://nara.is-a.dev/terms.html
+- (Cadangan: https://nydjustin.github.io/nara/ dan sub-halamannya)
 - Support server (Nara's Nest): https://discord.gg/zxSRYFnubQ
 
 The canonical sources of the Privacy Policy and Terms live in the Nara project
