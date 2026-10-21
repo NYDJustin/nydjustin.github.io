@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Nara</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #f6f5fc; color: #221d3a; line-height: 1.65; }
+header { background: #1a0f52; color: #f5f2ff; padding: 28px 20px 22px; }
+header .wrap, main, footer .wrap { max-width: 760px; margin: 0 auto; }
+header h1 { margin: 0 0 4px; font-size: 1.55rem; }
+header p { margin: 0; opacity: .85; font-size: .95rem; }
+nav { margin-top: 14px; }
+nav a { color: #ffd166; text-decoration: none; margin-right: 18px; font-weight: 600; font-size: .95rem; }
+nav a:hover { text-decoration: underline; }
+main { padding: 28px 20px 10px; }
+main > h1:first-child { font-size: 1.5rem; line-height: 1.3; }
+h2 { margin-top: 2em; font-size: 1.2rem; color: #1a0f52; }
+h3 { margin-top: 1.5em; font-size: 1.05rem; }
+a { color: #3b2bb3; }
+blockquote { border-left: 4px solid #ffd166; margin: 1em 0; padding: .4em 1em; background: #fff8e6; }
+hr { border: none; border-top: 1px solid #ddd8f3; margin: 2em 0; }
+code { background: #eceafd; padding: .1em .35em; border-radius: 4px; font-size: .92em; }
+footer { padding: 18px 20px 34px; color: #6b6584; font-size: .9rem; }
+</style>
+</head>
+<body>
+<header><div class="wrap"><h1>🐦 Nara</h1><p>A free AI companion for Discord — by @nydjustin</p><nav><a href="/nara/">Nara</a><a href="/nara/privacy.html">Privacy Policy</a><a href="/nara/terms.html">Terms of Service</a><a href="https://discord.gg/zxSRYFnubQ">Support Server</a></nav></div></header>
+<main><h1>Privacy Policy — Nara (Discord Bot)</h1>
+<p><strong>Last updated:</strong> October 20, 2026
+<strong>Operator:</strong> Nara is developed and operated by an independent developer, reachable on Discord as <strong>@nydjustin</strong> and in the Nara support server (see "Contact" below).</p>
+<p>This policy explains, in plain language, what the Nara Discord bot ("Nara", "the bot", "we") collects, why, how long it is kept, and the choices you have. Please read it before inviting or using Nara.</p>
+<blockquote>
+<p><strong>The short version:</strong> Remembering you is Nara's main feature, so Nara <strong>does store data</strong> — mainly short notes ("memory facts") it extracts from your conversations, plus the things you explicitly ask it to keep (reminders, schedules, topic watches). You can view, edit, and erase your personal memory at any time with built-in commands. We never sell data, and we do not use it for advertising.</p>
+</blockquote>
+<hr />
+<h2>1. What we collect and store</h2>
+<h3>1.1 Conversation content and memory notes</h3>
+<ul>
+<li><strong>Recent conversation window.</strong> To reply in context, Nara keeps the most recent messages (up to the last 30 per channel) of conversations it takes part in.</li>
+<li><strong>Conversation logs.</strong> Messages you exchange with Nara (and Nara's replies) are logged so that long-term memory can be built and rebuilt. There are per-channel logs and a per-user log of your exchanges with the bot.</li>
+<li><strong>Memory notes (facts).</strong> Periodically, older conversation is condensed into short notes — for example your name, language, interests, preferences, plans, and ongoing topics. These notes are the bot's long-term memory.</li>
+<li><strong>Per-user notes</strong> are tied to your Discord user ID and come in two strictly separated segments: <strong>public</strong> (learned in public/server chats — these follow you across servers and DMs) and <strong>private</strong> (learned in direct messages — these are never shown or used outside your DM with the bot).</li>
+<li><strong>Per-channel notes</strong> summarize a channel's shared conversation so Nara can follow along in that channel.</li>
+<li><strong>Memory index.</strong> Your memory facts are also stored in an indexed form, together with numerical "embedding" vectors, so the bot can quickly retrieve the facts most relevant to your current message.</li>
+</ul>
+<h3>1.2 Things you create with commands</h3>
+<ul>
+<li><strong>Reminders</strong> (<code>/remind</code>): the reminder text and time you set.</li>
+<li><strong>Recurring schedules</strong> (<code>/schedule</code>): the reminder text, frequency, and time (UTC).</li>
+<li><strong>Topic watches</strong> (<code>/watch</code>): the topic you asked Nara to follow and the identifiers/URLs of results already seen, so you are only notified about new findings.</li>
+<li><strong>Background tasks</strong> (<code>/task</code>): the task description you submit and its result/status.</li>
+<li><strong>Games and polls:</strong> trivia scores, word-chain game state, and active polls in a channel.</li>
+</ul>
+<h3>1.3 Feedback</h3>
+<p>If you use <code>/feedback</code>, we store the category you picked, your message (up to 1,000 characters), your Discord user ID, a timestamp, and whether it came from a DM or a server.</p>
+<h3>1.4 Usage statistics and operational records</h3>
+<ul>
+<li><strong>Per-turn usage records:</strong> timestamp, your Discord user ID, context type (DM/server/group DM), which AI model answered, response time, and whether the reply succeeded.</li>
+<li><strong>Daily aggregates:</strong> totals such as number of conversations and number of active users per day. The daily summary does not contain conversation content.</li>
+<li><strong>Fair-use counters:</strong> per-user daily counters (for example how many searches or images you requested today) and a "last seen" timestamp, used to enforce the fair daily limits described in our Terms.</li>
+<li><strong>Internal error reports:</strong> when something goes wrong (for example all reply services fail), the bot writes a short internal note about the incident for the developer to review. These notes describe the failure, not your conversation content, although a short technical excerpt may be included for debugging.</li>
+</ul>
+<h3>1.5 Voice and images</h3>
+<ul>
+<li><strong>Voice notes</strong> you send are forwarded to speech-to-text services and transcribed; the transcript is then handled like a normal message. The bot does not keep a library of your audio recordings.</li>
+<li><strong>Images you attach</strong> (Nara reads the first attached image) are passed to an AI provider with vision capability so Nara can describe or answer questions about them.</li>
+<li><strong>Images, speech, and sound effects Nara generates</strong> at your request are produced by third-party generation services and posted into the channel.</li>
+</ul>
+<h3>1.6 What we do <em>not</em> collect</h3>
+<ul>
+<li>We do not collect your password, payment details, email address, or anything from outside your interactions with the bot.</li>
+<li>We do not read messages in channels where Nara is not participating: in servers, Nara processes messages that mention it, messages in channels designated for it, commands, and game moves; in DMs and group DMs it processes the conversation it is part of.</li>
+<li>We do not sell personal data, and we do not build advertising profiles.</li>
+</ul>
+<hr />
+<h2>2. Why we process this data (purposes and legal bases)</h2>
+<ul>
+<li><strong>To provide the service</strong> — generating replies, keeping conversational context, and remembering you between conversations (performance of the service you requested; consent by using the bot).</li>
+<li><strong>To deliver features you set up</strong> — firing your reminders and schedules, checking your watched topics, and completing your background tasks (at your request).</li>
+<li><strong>Safety and fair use</strong> — enforcing daily limits, preventing spam and abuse, and keeping the free service sustainable (legitimate interests).</li>
+<li><strong>Improvement and troubleshooting</strong> — usage statistics, feedback, and internal error reports help the developer fix bugs and improve answer quality (legitimate interests). Feedback is reviewed by a human/agent workflow and is never applied automatically.</li>
+</ul>
+<hr />
+<h2>3. Third parties</h2>
+<p>Nara is a free service built on third-party infrastructure. To work, data passes through the following <strong>categories</strong> of providers:</p>
+<ul>
+<li><strong>Discord</strong> — the platform itself; all interactions occur through Discord and are also subject to Discord's own privacy policy.</li>
+<li><strong>AI model providers</strong> — your messages (and relevant memory notes and conversation context) are sent to third-party AI providers that generate Nara's replies. The same applies to voice transcription, speech and sound-effect synthesis, image understanding, image generation, and the computation of memory embeddings. These providers process content to return a result to the bot.</li>
+<li><strong>Web search providers</strong> — when you ask about current information, or when a watch, search, or task requires it, your search query (not your identity or memory) is sent to web search and news providers, and results are fetched from public websites.</li>
+</ul>
+<p><strong>A practical warning:</strong> because replies are generated by third-party AI providers, please do not share highly sensitive personal information (passwords, financial credentials, intimate details) with the bot. Retention by those providers is governed by their own policies.</p>
+<hr />
+<h2>4. How long we keep data</h2>
+<ul>
+<li><strong>Memory notes and conversation logs:</strong> kept until you erase them (see Section 5) or a server admin wipes a channel's memory. Memory is a core feature, so it does not expire on a fixed schedule.</li>
+<li><strong>Reminders:</strong> one-off reminders are removed after they fire; recurring schedules remain until you remove them.</li>
+<li><strong>Watches:</strong> remain until you remove them; the list of already-seen results per watch is trimmed to the most recent entries.</li>
+<li><strong>Background tasks:</strong> a limited history of recent tasks is kept (the most recent 50 records) and older ones roll off.</li>
+<li><strong>Feedback:</strong> kept until it has been reviewed and is no longer needed for development.</li>
+<li><strong>Usage records and aggregates:</strong> kept for as long as needed for operations, abuse prevention, and improvement.</li>
+<li><strong>Daily fair-use counters:</strong> reset daily.</li>
+</ul>
+<hr />
+<h2>5. Your choices and rights</h2>
+<p>You control your memory directly, inside Discord:</p>
+<ul>
+<li><strong>See it:</strong> <code>/memory</code> shows your personal notes, numbered per fact, and your channel's notes.</li>
+<li><strong>Edit it:</strong> <code>/fix</code> rewrites a single note; <code>/note</code> adds a note; <code>/setnotes</code> replaces a whole set.</li>
+<li><strong>Delete one note:</strong> <code>/forget</code> removes a single fact.</li>
+<li><strong>Delete everything personal:</strong> <code>/reset</code> erases all of Nara's personal notes about you, its indexed facts about you, and your personal conversation log. It always asks for confirmation first.</li>
+<li><strong>Channel memory:</strong> a server administrator can wipe a whole channel's memory with <code>/reset</code> (channel scope).</li>
+<li><strong>Reminders, schedules, and watches:</strong> list and remove your own entries at any time with <code>/schedule</code> and <code>/watch</code> (and <code>/remind</code> records disappear after firing).</li>
+</ul>
+<p><strong>Full deletion request:</strong> commands above cover memory. If you want <em>everything</em> associated with your user ID removed — including reminders, schedules, watches, feedback, and usage records — contact the developer in the support server or by DM to <strong>@nydjustin</strong> on Discord. Full requests are handled manually and completed within a reasonable time (normally within 30 days).</p>
+<p>Depending on where you live, you may also have legal rights to access, correct, delete, or object to processing of your personal data. The commands above satisfy most requests instantly; for anything else, use the contact below.</p>
+<hr />
+<h2>6. Children</h2>
+<p>Nara follows Discord's age requirements: you must be at least 13 years old (or the higher minimum age in your country) to use Discord and therefore Nara.</p>
+<h2>7. Changes to this policy</h2>
+<p>If this policy changes materially, the updated version will be posted at the same location as this document, with a new "last updated" date, and noted in the support server.</p>
+<h2>8. Contact</h2>
+<ul>
+<li>Support server: <strong>https://discord.gg/zxSRYFnubQ</strong></li>
+<li>Developer on Discord: <strong>@nydjustin</strong></li>
+</ul></main>
+<footer><div class="wrap">Nara is a free service provided as-is. Support: <a href="https://discord.gg/zxSRYFnubQ">discord.gg/zxSRYFnubQ</a></div></footer>
+</body>
+</html>
