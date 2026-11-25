@@ -130,7 +130,27 @@ footer .sp{ flex:1; }
 <div class="divider">✦ ✦ ✦</div>
 <h2 class="sec">Meet her first</h2>
 <p class="lead">Not sure yet? Nara lives in her own support server, <a href="https://discord.gg/zAnc7FJmxW">Nara's Nest</a> — drop in, say hi in #nara-chat, and try everything before inviting her anywhere.</p>
-<div class="btns"><a class="btn gold" href="https://discord.gg/zAnc7FJmxW"><img class="nico" src="https://nara.is-a.dev/nara-mark.png" alt=""> Join Nara's Nest</a><a class="btn ghost" style="border-color:#b9aef0;color:#2a1a7a" href="https://discord.com/oauth2/authorize?client_id=1561503616794099822&scope=bot+applications.commands&permissions=2184301632">Invite Nara</a></div>
+<p class="lead" id="nest-live">The Nest is open around the clock, and Nara is home. Come say hi.</p>
+<div class="btns"><a class="btn gold" id="nest-join" href="https://discord.gg/zAnc7FJmxW"><img class="nico" src="https://nara.is-a.dev/nara-mark.png" alt=""> Join Nara's Nest</a><a class="btn ghost" style="border-color:#b9aef0;color:#2a1a7a" href="https://discord.com/oauth2/authorize?client_id=1561503616794099822&scope=bot+applications.commands&permissions=2184301632">Invite Nara</a></div>
+<script>
+(function(){
+  var el = document.getElementById('nest-live');
+  var btn = document.getElementById('nest-join');
+  if (!el || !window.fetch) return;
+  var ctl = window.AbortController ? new AbortController() : null;
+  var to = ctl ? setTimeout(function(){ ctl.abort(); }, 5000) : null;
+  fetch('https://discord.com/api/guilds/806134080860717066/widget.json', ctl ? {signal: ctl.signal} : {})
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if (to) clearTimeout(to);
+      if (d && typeof d.presence_count === 'number') {
+        el.textContent = 'Right now, ' + d.presence_count + (d.presence_count === 1 ? ' member is' : ' members are') + ' online in the Nest, and Nara is home. Come say hi.';
+      }
+      if (btn && d && d.instant_invite) { btn.href = d.instant_invite; }
+    })
+    .catch(function(){ if (to) clearTimeout(to); });
+})();
+</script>
 </main>
 <footer><div class="wrap"><span><img class="nico" src="https://nara.is-a.dev/nara-mark.png" alt=""> <strong>Nara</strong> — free for everyone, living in her nest</span><span class="sp"></span><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="https://discord.gg/zAnc7FJmxW">Support server</a></div></footer>
 </body>
